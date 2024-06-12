@@ -5,7 +5,7 @@ underlying thread or callbacks.
 
 > No prior knowledge of coroutines is required, but you're expected to be familiar with basic Kotlin syntax.
 >
-{type="tip"}
+{style="tip"}
 
 You'll learn:
 
@@ -18,7 +18,7 @@ this tutorial works similarly for any other libraries that support coroutines.
 
 > You can find solutions for all of the tasks on the `solutions` branch of the [project's repository](http://github.com/kotlin-hands-on/intro-coroutines).
 >
-{type="tip"}
+{style="tip"}
 
 ## Before you start
 
@@ -186,7 +186,7 @@ The corresponding test file `test/tasks/AggregationKtTest.kt` shows an example o
 > You can jump between the source code and the test class automatically by using the [IntelliJ IDEA shortcut](https://www.jetbrains.com/help/idea/create-tests.html#test-code-navigation)
 > `Ctrl+Shift+T` / `⇧ ⌘ T`.
 >
-{type="tip"}
+{style="tip"}
 
 After implementing this task, the resulting list for the "kotlin" organization should be similar to the following:
 
@@ -429,7 +429,7 @@ and error-prone, especially when several underlying threads and synchronization 
 > necessary dependencies and solutions for using RxJava can be found in a separate `rx` branch. It is also possible to
 > complete this tutorial and implement or check the proposed Rx versions for a proper comparison.
 >
-{type="tip"}
+{style="tip"}
 
 ## Suspending functions
 
@@ -482,7 +482,7 @@ new API.
 > result in an error with the message "Suspend function 'getOrgRepos' should be called only from a coroutine or another
 > suspend function".
 >
-{type="note"}
+{style="note"}
 
 1. Copy the implementation of `loadContributorsBlocking()` that is defined in `src/tasks/Request1Blocking.kt`
    into the `loadContributorsSuspend()` that is defined in `src/tasks/Request4Suspend.kt`.
@@ -528,7 +528,7 @@ thread -> coroutine
 > Coroutines are often called lightweight threads because you can run code on coroutines, similar to how you run code on
 > threads. The operations that were blocking before (and had to be avoided) can now suspend the coroutine instead.
 >
-{type="note"}
+{style="note"}
 
 ### Starting a new coroutine
 
@@ -640,7 +640,7 @@ tests.
 
 > Watch [this video](https://www.youtube.com/watch?v=zEZc5AmHQhk) for a better understanding of coroutines.
 >
-{type="tip"}
+{style="tip"}
 
 If there is a list of deferred objects, you can call `awaitAll()` to await the results of all of them:
 
@@ -1042,7 +1042,7 @@ top-level coroutine. All the nested coroutines then inherit the context and modi
 > use `CoroutineDispatchers.Main` by default for the top coroutine and then to explicitly put a different dispatcher when
 > you need to run the code on a different thread.
 >
-{type="tip"}
+{style="tip"}
 
 ## Showing progress
 
@@ -1267,7 +1267,7 @@ fun log(message: Any?) {
 
 > Watch [this video](https://www.youtube.com/watch?v=HpWQUoVURWQ) for a better understanding of channels.
 >
-{type="tip"}
+{style="tip"}
 
 ### Task 7
 
@@ -1459,7 +1459,7 @@ which allows for more flexibility and easier testing.
 
 > The testing API that supports virtual time is [Experimental](components-stability.md) and may change in the future.
 >
-{type="warning"}
+{style="warning"}
 
 By default, the compiler shows warnings if you use the experimental testing API. To suppress these warnings, annotate
 the test function or the whole class containing the tests with `@OptIn(ExperimentalCoroutinesApi::class)`.
@@ -1547,7 +1547,7 @@ can see the difference in tests that use virtual time.
 > The tests for the remaining "suspend" and "progress" tasks are very similar – you can find them in the project's
 > `solutions` branch.
 >
-{type="tip"}
+{style="tip"}
 
 ## What's next
 

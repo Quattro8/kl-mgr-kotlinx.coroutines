@@ -22,7 +22,7 @@ fun main() {
 
 > You can get the full code from [here](https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-core/jvm/test/guide/example-flow-01.kt).
 >
-{type="note"}
+{style="note"}
 
 This code outputs:
 
@@ -55,7 +55,7 @@ fun main() {
 
 > You can get the full code from [here](https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-core/jvm/test/guide/example-flow-02.kt).
 >
-{type="note"}
+{style="note"}
 
 This code outputs the same numbers, but it waits 100ms before printing each one.
 
@@ -89,7 +89,7 @@ fun main() = runBlocking<Unit> {
 
 > You can get the full code from [here](https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-core/jvm/test/guide/example-flow-03.kt).
 >
-{type="note"}
+{style="note"}
 
 This code prints the numbers after waiting for a second.
 
@@ -133,7 +133,7 @@ fun main() = runBlocking<Unit> {
 
 > You can get the full code from [here](https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-core/jvm/test/guide/example-flow-04.kt).
 >
-{type="note"}
+{style="note"}
 
 This code waits 100ms before printing each number without blocking the main thread. This is verified
 by printing "I'm not blocked" every 100ms from a separate coroutine that is running in the main thread:
@@ -160,7 +160,7 @@ Notice the following differences in the code with the [Flow] from the earlier ex
 > We can replace [delay] with `Thread.sleep` in the body of `simple`'s `flow { ... }` and see that the main
 > thread is blocked in this case. 
 >
-{type="note"}
+{style="note"}
 
 ## Flows are cold
 
@@ -194,7 +194,7 @@ fun main() = runBlocking<Unit> {
 
 > You can get the full code from [here](https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-core/jvm/test/guide/example-flow-05.kt).
 >
-{type="note"}
+{style="note"}
 
 Which prints:
 
@@ -250,7 +250,7 @@ fun main() = runBlocking<Unit> {
 
 > You can get the full code from [here](https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-core/jvm/test/guide/example-flow-06.kt).
 >
-{type="note"}
+{style="note"}
 
 Notice how only two numbers get emitted by the flow in the `simple` function, producing the following output: 
 
@@ -291,7 +291,7 @@ fun main() = runBlocking<Unit> {
 
 > You can get the full code from [here](https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-core/jvm/test/guide/example-flow-07.kt).
 >
-{type="note"}
+{style="note"}
 
 <!--- TEST
 1
@@ -336,7 +336,7 @@ fun main() = runBlocking<Unit> {
 
 > You can get the full code from [here](https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-core/jvm/test/guide/example-flow-08.kt).
 >
-{type="note"}
+{style="note"}
 
 It produces the following three lines, each appearing one second after the previous:
 
@@ -381,7 +381,7 @@ fun main() = runBlocking<Unit> {
 
 > You can get the full code from [here](https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-core/jvm/test/guide/example-flow-09.kt).
 >
-{type="note"}
+{style="note"}
 
 The output of this code is:
 
@@ -429,7 +429,7 @@ fun main() = runBlocking<Unit> {
 
 > You can get the full code from [here](https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-core/jvm/test/guide/example-flow-10.kt).
 >
-{type="note"}
+{style="note"}
 
 The output of this code clearly shows that the execution of the `flow { ... }` body in the `numbers()` function
 stopped after emitting the second number:
@@ -470,7 +470,7 @@ fun main() = runBlocking<Unit> {
 
 > You can get the full code from [here](https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-core/jvm/test/guide/example-flow-11.kt).
 >
-{type="note"}
+{style="note"}
 
 Prints a single number:
 
@@ -514,7 +514,7 @@ fun main() = runBlocking<Unit> {
 
 > You can get the full code from [here](https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-core/jvm/test/guide/example-flow-12.kt).
 >
-{type="note"}
+{style="note"}
 
 Producing:
 
@@ -577,7 +577,7 @@ fun main() = runBlocking<Unit> {
 
 > You can get the full code from [here](https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-core/jvm/test/guide/example-flow-13.kt).
 >
-{type="note"}
+{style="note"}
 
 Running this code produces:
 
@@ -627,7 +627,7 @@ fun main() = runBlocking<Unit> {
 
 > You can get the full code from [here](https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-core/jvm/test/guide/example-flow-14.kt).
 >
-{type="note"}
+{style="note"}
 
 This code produces the following exception:
 
@@ -673,7 +673,7 @@ fun main() = runBlocking<Unit> {
 
 > You can get the full code from [here](https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-core/jvm/test/guide/example-flow-15.kt).
 >
-{type="note"}
+{style="note"}
   
 Notice how `flow { ... }` works in the background thread, while collection happens in the main thread:   
 
@@ -726,7 +726,7 @@ fun main() = runBlocking<Unit> {
 
 > You can get the full code from [here](https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-core/jvm/test/guide/example-flow-16.kt).
 >
-{type="note"}
+{style="note"}
 
 It produces something like this, with the whole collection taking around 1200 ms (three numbers, 400 ms for each):
 
@@ -772,7 +772,7 @@ fun main() = runBlocking<Unit> {
 
 > You can get the full code from [here](https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-core/jvm/test/guide/example-flow-17.kt).
 >
-{type="note"}
+{style="note"}
 
 It produces the same numbers just faster, as we have effectively created a processing pipeline,
 having to only wait 100 ms for the first number and then spending only 300 ms to process
@@ -790,7 +790,7 @@ Collected in 1071 ms
 > Note that the [flowOn] operator uses the same buffering mechanism when it has to change a [CoroutineDispatcher],
 > but here we explicitly request buffering without changing the execution context.
 >
-{type="note"}
+{style="note"}
 
 ### Conflation
 
@@ -828,7 +828,7 @@ fun main() = runBlocking<Unit> {
 
 > You can get the full code from [here](https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-core/jvm/test/guide/example-flow-18.kt).
 >
-{type="note"}
+{style="note"}
 
 We see that while the first number was still being processed the second, and third were already produced, so
 the second one was _conflated_ and only the most recent (the third one) was delivered to the collector:
@@ -878,7 +878,7 @@ fun main() = runBlocking<Unit> {
 
 > You can get the full code from [here](https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-core/jvm/test/guide/example-flow-19.kt).
 >
-{type="note"}
+{style="note"}
  
 Since the body of [collectLatest] takes 300 ms, but new values are emitted every 100 ms, we see that the block
 is run on every value, but completes only for the last value:
@@ -919,7 +919,7 @@ fun main() = runBlocking<Unit> {
 
 > You can get the full code from [here](https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-core/jvm/test/guide/example-flow-20.kt).
 >
-{type="note"}
+{style="note"}
 
 This example prints:
 
@@ -945,7 +945,7 @@ albeit results that are printed every 400 ms:
 > We use a [onEach] intermediate operator in this example to delay each element and make the code 
 > that emits sample flows more declarative and shorter.
 >
-{type="note"}
+{style="note"}
 
 ```kotlin
 import kotlinx.coroutines.*
@@ -967,7 +967,7 @@ fun main() = runBlocking<Unit> {
 
 > You can get the full code from [here](https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-core/jvm/test/guide/example-flow-21.kt).
 >
-{type="note"}
+{style="note"}
 
 <!--- TEST ARBITRARY_TIME
 1 -> one at 437 ms from start
@@ -997,7 +997,7 @@ fun main() = runBlocking<Unit> {
 
 > You can get the full code from [here](https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-core/jvm/test/guide/example-flow-22.kt).
 >
-{type="note"}
+{style="note"}
 
 We get quite a different output, where a line is printed at each emission from either `nums` or `strs` flows:
 
@@ -1071,7 +1071,7 @@ fun main() = runBlocking<Unit> {
 
 > You can get the full code from [here](https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-core/jvm/test/guide/example-flow-23.kt).
 >
-{type="note"}
+{style="note"}
 
 The sequential nature of [flatMapConcat] is clearly seen in the output:
 
@@ -1119,7 +1119,7 @@ fun main() = runBlocking<Unit> {
 
 > You can get the full code from [here](https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-core/jvm/test/guide/example-flow-24.kt).
 >
-{type="note"}
+{style="note"}
 
 The concurrent nature of [flatMapMerge] is obvious:
 
@@ -1138,7 +1138,7 @@ The concurrent nature of [flatMapMerge] is obvious:
 > collects the resulting flows concurrently, it is the equivalent of performing a sequential 
 > `map { requestFlow(it) }` first and then calling [flattenMerge] on the result.
 >
-{type="note"}
+{style="note"}
 
 ### flatMapLatest   
 
@@ -1172,7 +1172,7 @@ fun main() = runBlocking<Unit> {
 
 > You can get the full code from [here](https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-core/jvm/test/guide/example-flow-25.kt).
 >
-{type="note"}
+{style="note"}
 
 The output here in this example is a good demonstration of how [flatMapLatest] works:
 
@@ -1191,7 +1191,7 @@ The output here in this example is a good demonstration of how [flatMapLatest] w
 > and cannot be cancelled. However, a differnce in output would be visible if we were to use suspending functions 
 > like `delay` in `requestFlow`.
 >
-{type="note"}
+{style="note"}
 
 ## Flow exceptions
 
@@ -1230,7 +1230,7 @@ fun main() = runBlocking<Unit> {
 
 > You can get the full code from [here](https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-core/jvm/test/guide/example-flow-26.kt).
 >
-{type="note"}
+{style="note"}
 
 This code successfully catches an exception in [collect] terminal operator and, 
 as we see, no more values are emitted after that:
@@ -1281,7 +1281,7 @@ fun main() = runBlocking<Unit> {
 
 > You can get the full code from [here](https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-core/jvm/test/guide/example-flow-27.kt).
 >
-{type="note"}
+{style="note"}
 
 This exception is still caught and collection is stopped:
 
@@ -1340,7 +1340,7 @@ fun main() = runBlocking<Unit> {
 
 > You can get the full code from [here](https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-core/jvm/test/guide/example-flow-28.kt).
 >
-{type="note"} 
+{style="note"} 
  
 The output of the example is the same, even though we do not have `try/catch` around the code anymore. 
 
@@ -1383,7 +1383,7 @@ fun main() = runBlocking<Unit> {
 
 > You can get the full code from [here](https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-core/jvm/test/guide/example-flow-29.kt).
 >
-{type="note"}
+{style="note"}
  
 A "Caught ..." message is not printed despite there being a `catch` operator: 
 
@@ -1430,7 +1430,7 @@ fun main() = runBlocking<Unit> {
 
 > You can get the full code from [here](https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-core/jvm/test/guide/example-flow-30.kt).
 >
-{type="note"} 
+{style="note"} 
  
 Now we can see that a "Caught ..." message is printed and so we can catch all the exceptions without explicitly
 using a `try/catch` block: 
@@ -1474,7 +1474,7 @@ fun main() = runBlocking<Unit> {
 
 > You can get the full code from [here](https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-core/jvm/test/guide/example-flow-31.kt).
 >
-{type="note"} 
+{style="note"} 
 
 This code prints three numbers produced by the `simple` flow followed by a "Done" string:
 
@@ -1512,7 +1512,7 @@ fun main() = runBlocking<Unit> {
 
 > You can get the full code from [here](https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-core/jvm/test/guide/example-flow-32.kt).
 >
-{type="note"} 
+{style="note"} 
 
 <!--- TEST 
 1
@@ -1547,7 +1547,7 @@ fun main() = runBlocking<Unit> {
 
 > You can get the full code from [here](https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-core/jvm/test/guide/example-flow-33.kt).
 >
-{type="note"}
+{style="note"}
 
 As you may expect, it prints:
 
@@ -1589,7 +1589,7 @@ fun main() = runBlocking<Unit> {
 
 > You can get the full code from [here](https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-core/jvm/test/guide/example-flow-34.kt).
 >
-{type="note"}
+{style="note"}
 
 We can see the completion cause is not null, because the flow was aborted due to downstream exception:
 
@@ -1638,7 +1638,7 @@ fun main() = runBlocking<Unit> {
 
 > You can get the full code from [here](https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-core/jvm/test/guide/example-flow-35.kt).
 >
-{type="note"} 
+{style="note"} 
   
 As you can see, it prints:
 
@@ -1675,7 +1675,7 @@ fun main() = runBlocking<Unit> {
 
 > You can get the full code from [here](https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-core/jvm/test/guide/example-flow-36.kt).
 >
-{type="note"} 
+{style="note"} 
   
 It prints:
 
@@ -1731,7 +1731,7 @@ fun main() = runBlocking<Unit> {
 
 > You can get the full code from [here](https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-core/jvm/test/guide/example-flow-37.kt).
 >
-{type="note"}
+{style="note"}
 
 We get only numbers up to 3 and a [CancellationException] after trying to emit number 4:
 
@@ -1769,7 +1769,7 @@ fun main() = runBlocking<Unit> {
 
 > You can get the full code from [here](https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-core/jvm/test/guide/example-flow-38.kt).
 >
-{type="note"}
+{style="note"}
 
 All numbers from 1 to 5 are collected and cancellation gets detected only before return from `runBlocking`:
 
@@ -1807,7 +1807,7 @@ fun main() = runBlocking<Unit> {
 
 > You can get the full code from [here](https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-core/jvm/test/guide/example-flow-39.kt).
 >
-{type="note"}
+{style="note"}
 
 With the `cancellable` operator only the numbers from 1 to 3 are collected:
 

@@ -62,7 +62,7 @@ suspend fun doSomethingUsefulTwo(): Int {
 
 > You can get the full code [here](https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-core/jvm/test/guide/example-compose-01.kt).
 >
-{type="note"}
+{style="note"}
 
 It produces something like this:
 
@@ -113,7 +113,7 @@ suspend fun doSomethingUsefulTwo(): Int {
 
 > You can get the full code [here](https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-core/jvm/test/guide/example-compose-02.kt).
 >
-{type="note"}
+{style="note"}
 
 It produces something like this:
 
@@ -166,7 +166,7 @@ suspend fun doSomethingUsefulTwo(): Int {
 
 > You can get the full code [here](https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-core/jvm/test/guide/example-compose-03.kt).
 >
-{type="note"}
+{style="note"}
 
 It produces something like this:
 
@@ -193,7 +193,7 @@ standard `lazy` function in cases when computation of the value involves suspend
 > in other programming languages. Using this style with Kotlin coroutines is **strongly discouraged** for the
 > reasons explained below.
 >
-{type="note"}
+{style="note"}
 
 We can define async-style functions that invoke `doSomethingUsefulOne` and `doSomethingUsefulTwo`
 _asynchronously_ using the [async] coroutine builder using a [GlobalScope] reference to 
@@ -205,7 +205,7 @@ to use the resulting deferred value to get the result.
 > [GlobalScope] is a delicate API that can backfire in non-trivial ways, one of which will be explained
 > below, so you must explicitly opt-in into using `GlobalScope` with `@OptIn(DelicateCoroutinesApi::class)`. 
 >
-{type="note"}
+{style="note"}
 
 ```kotlin
 // The result type of somethingUsefulOneAsync is Deferred<Int>
@@ -274,7 +274,7 @@ suspend fun doSomethingUsefulTwo(): Int {
 
 > You can get the full code [here](https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-core/jvm/test/guide/example-compose-04.kt).
 >
-{type="note"}
+{style="note"}
 
 <!--- TEST ARBITRARY_TIME
 The answer is 42
@@ -341,7 +341,7 @@ suspend fun doSomethingUsefulTwo(): Int {
 
 > You can get the full code [here](https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-core/jvm/test/guide/example-compose-05.kt).
 >
-{type="note"}
+{style="note"}
 
 We still have concurrent execution of both operations, as evident from the output of the above `main` function: 
 
@@ -387,7 +387,7 @@ suspend fun failedConcurrentSum(): Int = coroutineScope {
 
 > You can get the full code [here](https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-core/jvm/test/guide/example-compose-06.kt).
 >
-{type="note"}
+{style="note"}
 
 Note how both the first `async` and the awaiting parent are cancelled on failure of one of the children
 (namely, `two`):

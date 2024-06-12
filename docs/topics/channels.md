@@ -33,7 +33,7 @@ fun main() = runBlocking {
 
 > You can get the full code [here](https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-core/jvm/test/guide/example-channel-01.kt).
 >
-{type="note"}
+{style="note"}
 
 The output of this code is:
 
@@ -79,7 +79,7 @@ fun main() = runBlocking {
 
 > You can get the full code [here](https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-core/jvm/test/guide/example-channel-02.kt).
 >
-{type="note"}
+{style="note"}
 
 <!--- TEST 
 1
@@ -120,7 +120,7 @@ fun main() = runBlocking {
 
 > You can get the full code [here](https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-core/jvm/test/guide/example-channel-03.kt).
 >
-{type="note"}
+{style="note"}
 
 <!--- TEST 
 1
@@ -184,7 +184,7 @@ fun CoroutineScope.square(numbers: ReceiveChannel<Int>): ReceiveChannel<Int> = p
 
 > You can get the full code [here](https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-core/jvm/test/guide/example-channel-04.kt).
 >
-{type="note"}
+{style="note"}
 
 <!--- TEST 
 1
@@ -199,7 +199,7 @@ Done!
 > so that we can rely on [structured concurrency](composing-suspending-functions.md#structured-concurrency-with-async) to make
 > sure that we don't have lingering global coroutines in our application.
 >
-{type="note"}
+{style="note"}
 
 ## Prime numbers with pipeline
 
@@ -268,7 +268,7 @@ fun CoroutineScope.filter(numbers: ReceiveChannel<Int>, prime: Int) = produce<In
 
 > You can get the full code [here](https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-core/jvm/test/guide/example-channel-05.kt).
 >
-{type="note"}
+{style="note"}
 
 The output of this code is:
 
@@ -362,7 +362,7 @@ fun CoroutineScope.launchProcessor(id: Int, channel: ReceiveChannel<Int>) = laun
 
 > You can get the full code [here](https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-core/jvm/test/guide/example-channel-06.kt).
 >
-{type="note"}
+{style="note"}
 
 The output will be similar to the the following one, albeit the processor ids that receive
 each specific integer may be different:
@@ -437,7 +437,7 @@ suspend fun sendString(channel: SendChannel<String>, s: String, time: Long) {
 
 > You can get the full code [here](https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-core/jvm/test/guide/example-channel-07.kt).
 >
-{type="note"}
+{style="note"}
 
 The output is:
 
@@ -487,7 +487,7 @@ fun main() = runBlocking<Unit> {
 
 > You can get the full code [here](https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-core/jvm/test/guide/example-channel-08.kt).
 >
-{type="note"}
+{style="note"}
 
 It prints "sending" _five_ times using a buffered channel with capacity of _four_:
 
@@ -540,7 +540,7 @@ suspend fun player(name: String, table: Channel<Ball>) {
 
 > You can get the full code [here](https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-core/jvm/test/guide/example-channel-09.kt).
 >
-{type="note"}
+{style="note"}
 
 The "ping" coroutine is started first, so it is the first one to receive the ball. Even though "ping"
 coroutine immediately starts receiving the ball again after sending it back to the table, the ball gets
@@ -604,7 +604,7 @@ fun main() = runBlocking<Unit> {
 
 > You can get the full code [here](https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-core/jvm/test/guide/example-channel-10.kt).
 >
-{type="note"}
+{style="note"}
 
 It prints following lines:
 

@@ -70,7 +70,7 @@ fun main() = runBlocking {
 
 > You can get the full code [here](https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-core/jvm/test/guide/example-sync-01.kt).
 >
-{type="note"}
+{style="note"}
 
 <!--- TEST LINES_START
 Completed 100000 actions in
@@ -123,7 +123,7 @@ fun main() = runBlocking {
 
 > You can get the full code [here](https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-core/jvm/test/guide/example-sync-02.kt).
 >
-{type="note"}
+{style="note"}
 
 <!--- TEST LINES_START
 Completed 100000 actions in
@@ -180,7 +180,7 @@ fun main() = runBlocking {
 
 > You can get the full code [here](https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-core/jvm/test/guide/example-sync-03.kt).
 >
-{type="note"}
+{style="note"}
 
 <!--- TEST ARBITRARY_TIME
 Completed 100000 actions in xxx ms
@@ -239,7 +239,7 @@ fun main() = runBlocking {
 
 > You can get the full code [here](https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-core/jvm/test/guide/example-sync-04.kt).
 >
-{type="note"}
+{style="note"}
 
 <!--- TEST ARBITRARY_TIME
 Completed 100000 actions in xxx ms
@@ -296,7 +296,7 @@ fun main() = runBlocking {
 
 > You can get the full code [here](https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-core/jvm/test/guide/example-sync-05.kt).
 >
-{type="note"}
+{style="note"}
 
 <!--- TEST ARBITRARY_TIME
 Completed 100000 actions in xxx ms
@@ -358,7 +358,7 @@ fun main() = runBlocking {
 
 > You can get the full code [here](https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-core/jvm/test/guide/example-sync-06.kt).
 >
-{type="note"}
+{style="note"}
 
 <!--- TEST ARBITRARY_TIME
 Completed 100000 actions in xxx ms
